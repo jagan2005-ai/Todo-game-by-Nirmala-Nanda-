@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Routine Todo Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="min-h-full bg-gradient-to-br from-purple-400 via-pink-500 to-red-500">
+    <div class="container mx-auto px-4 py-8 max-w-2xl">
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-lg">
+                🌟 Daily Routine
+            </h1>
+            <p class="text-white/80 text-lg">Build your perfect day, one routine at a time!</p>
+        </div>
+        
+        <!-- Input Section -->
+        <div class="bg-white/20 backdrop-blur-lg rounded-2xl p-6 mb-8 shadow-xl border border-white/30">
+            <form id="routineForm" class="flex flex-col sm:flex-row gap-4">
+                <input 
+                    type="text" 
+                    id="routineInput" 
+                    placeholder="Enter your routine" 
+                    class="flex-1 px-4 py-3 rounded-xl border-2 border-white/30 bg-white/90 text-gray-800 placeholder-gray-500 focus:outline-none focus:border-purple-400 focus:bg-white transition-all duration-300"
+                    required
+                >
+                <button 
+                    type="submit" 
+                    class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                >
+                    ✨ Add Routine
+                </button>
+            </form>
+        </div>
+        
+        <!-- Routines List Section -->
+        <div class="bg-white/20 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/30">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                📋 Your Routines
+                <span id="routineCount" class="text-sm bg-white/30 px-3 py-1 rounded-full">0</span>
+            </h2>
+            
+            <div id="emptyState" class="text-center py-8 text-white/70">
+                <div class="text-6xl mb-4">🎯</div>
+                <p class="text-lg">No routines yet! Add your first routine above.</p>
+            </div>
+            
+            <ul id="routinesList" class="space-y-3 hidden">
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js">
+      </script></body>
+</html>
